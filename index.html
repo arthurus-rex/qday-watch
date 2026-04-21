@@ -16,9 +16,14 @@
         
     <h2>Newsfeed</h2>
 
+      <h3>[April 20th, 2026]  <a href="https://words.filippo.io/128-bits/">Quantum computers are not a threat to 128-bit symmetric keys</a></h3>
+      <p><b>Filippo Valsorda</b> - <i>Blog by a senior cryptographic engineer and software developer on the Golang team.</i></p>
+      <p>Good breakdown on why Grover's algorithm has not been shown to provide any threatening speedup to brute-forcing AES-128.  Valsorda's opinion here reflects the majority opinion of cryptographic experts at this time, including NIST and Germany's BSI.  CNSA 2.0 (NSA) is the primary dissent, requiring 256-bit security for all algorithms including AES and SHA as a method of future-proofing.  However, AES-256 incurrs a hefty performance detriment and increases overall migration effort, with Valsorda saying, "Conflating necessary and unnecessary changes will cause needless churn and take resources away from the urgent updates."</p>
+
       <h3>[April 17th, 2026]  <a href="https://arstechnica.com/security/2026/04/while-some-big-tech-players-accelerate-pqc-readiness-others-stay-the-course/">Recent advances push Big Tech closer to the Q-Day danger zone</h3></a>
       <p><b>Ars Technica</b> - <i>Dan Goodin</i></p>
       <p>Good summary of all industry happenings the past few weeks plus historical context, all without being alarmist.  If you're just catching up, start here.  Notably, Ars omits that the Oratomic findings are still being evaluated by the wider cryptographic community (not a malicious omission, I'm sure).  They also draw attention to Apple having not responded to their request for comment on their PQC transition, but since <a href="https://security.apple.com/blog/imessage-pq3/">Apple has been incorporating PQC key encapsulation into iMessage since 2023</a>, it's probably in the works.  </p>
+
 
       <h3>[April 8th, 2026]  <a href="https://ethz.ch/en/news-and-events/eth-news/news/2026/04/a-new-trick-brings-stability-to-quantum-operations.html">A new trick brings stability to quantum computers</a></h3>
       <p><b>ETH Zürich</b> - <i>Oliver Morsch, freelance author</i></p>
@@ -37,8 +42,8 @@
 
       
       <h3>[April 6th, 2026]  <a href="https://words.filippo.io/crqc-timeline/">A cryptography engineer's perspective on quantum computing timelines</a></h3>
-      <p><b>Filippo Valsorda</b></p>
-      <p>Blog by a senior cryptographic engineer and software developer on the Golang team.  He describes the reasoning behind his change of position regarding PQC and why the transition to PQC must be accelerated, and announces ML-DSA will be added to X.509 with exception for Merkle Tree Certifikates for WebPKI.  His advice is "any non-PQ key exchange should be considered a potential active compromise, worthy of warning" and "we need to forget about non-interactive key exchanges (NIKEs) for a while."  He also advocates for not bothering with hybrid classic+PQC crypto, and suggests that symmetric encryption should be at 128-bit strength (as opposed to the 256-bit strength that CNSA 2.0 demands).  And, he draws attention to file encryption being vulnerable and the need to "error out on non-PQC age recipient types soon."</p>
+      <p><b>Filippo Valsorda</b> - <i>Blog by a senior cryptographic engineer and software developer on the Golang team</i></p>
+      <p>Valsorda describes the reasoning behind his change of position regarding PQC and why the transition to PQC must be accelerated, and announces ML-DSA will be added to X.509 with exception for Merkle Tree Certifikates for WebPKI.  His advice is "any non-PQ key exchange should be considered a potential active compromise, worthy of warning" and "we need to forget about non-interactive key exchanges (NIKEs) for a while."  He also advocates for not bothering with hybrid classic+PQC crypto, and suggests that symmetric encryption should be at 128-bit strength (as opposed to the 256-bit strength that CNSA 2.0 demands).  And, he draws attention to file encryption being vulnerable and the need to "error out on non-PQC age recipient types soon."</p>
 
 
       <h3>[March 31st, 2026] <a href="https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/">Safeguarding cryptocurrency by disclosing quantum vulnerabilities responsibly</a></h3>
