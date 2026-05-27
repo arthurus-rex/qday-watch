@@ -19,6 +19,15 @@
         
     <h2>Newsfeed</h2>
 
+      <h3>[May 13th, 2026] <a href="https://keymaterial.net/2026/05/13/so-you-want-to-deploy-fn-dsa/">So you want to deploy FN-DSA</a></h3>
+      <p><b>Sophie Schmieg</b> - <i>ISE Crypto Team Lead at Google</i></p>
+      <p>On the blog Key Material, Schmieg describes pitfalls associated with FN-DSA, an upcoming NIST PQC signature standard still in the initial public draft.
+      FN-DSA is long-awaited by software engineers struggling to manage large signature sizes, but is difficult to implement securely in practice.
+      Many cryptographers have already noted that FN-DSA floating-point signing is slow and difficult to do in constant time.
+      Schmieg calls attention to additional concerns, notably that prehashing (similar to ML-DSA) cannot be done securely without introducing a separate message compression hash and double-hashing the message, and also that NIST may chose to introduce variable-size signatures for FN-DSA.
+      The latter is an attempt to keep FN-DSA signatures as small as possible, but could introduce issues in cryptographic infrastructure and matching logic if not accommodated.</p>
+
+
       <h3>[May 8th, 2026] <a href="https://arstechnica.com/science/2026/05/manufacturing-qubits-that-can-move/">Manufacturing qubits that can move</a></h3>
       <p><b>Ars Technica</b> - <i>John Timmer</i></p>
       <p>News article describing a recently-released academic paper (a collaboration between Delft University of Technology and the startup QuTech article below) around advancements in quantum dot-based computers. 
