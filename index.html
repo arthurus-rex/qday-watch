@@ -20,6 +20,16 @@
     <h2>Newsfeed</h2>
 
 
+      <h3>[July 29th, 2026] <a href="https://blog.cloudflare.com/post-quantum-authentication-to-origins/">Post-quantum authentication to origins is now supperted</a></h3>
+      <p><b>Cloudflare blog</b> - <i>Luke Valenta and Kevin Guthrie</i></p>
+      <p>"Cloudflare's Authenticated Origin Pulls and Custom Origin Trust Store now support post-quantum authentication," an important milestone in the Internet infrastructure-wide migration to PQC.
+      While they maintain a commitment to future Merkle-tree certificate strategies for wider PKI, the "pre-existing trust relationship between Cloudflare and customers" in the Cloudflare-to-origin connection allows for deployment of custom PKI that does not require a certificate transparency log.
+      All ML-DSA strengths are enabled, with ML-DSA-44 being default.
+      Custom Origin Trust Stores now allow ML-DSA certificate authorities, and Authenticated Origin Pulls can use mTLS with ML-DSA certs and private keys, with global configs still in flight.
+      Interestingly, Cloudflare's current strategy for preventing downgrade attacks is to have the verifying party remove trust in classical authentication, and their solution requires OpenSSL 3.5.0+ and CIRCL, switching to Golang 1.27 when it is released in August, 2026.
+      Like the rest of the Golang-based ecosystem, Cloudflare cannot fully enable ML-DSA X.509 certs until Go catches up.
+      Instructions for enabling these features are included in the blog post.</p>
+
       <h3>[July, 2026] <a href="https://www.rfc-editor.org/info/rfc9954">RFC 9954: Hybrid Key Exchange in TLS 1.3</a></h3>
       <p><b>D. Stebila, S. Fluhrer, S. Gueron</b></p>
       <p>New informational RFC on hybrid key exchange in TLS 1.3, provided as reference.</p>
@@ -83,6 +93,23 @@
          <li><b><a href="https://www.diraq.com/">Diraq</a> ($38 million)</b> - Continuing the proud tradition of companies stealing the names of famous scientists.  Modified silicon transistor-based quantum computing.  Lots of Nature papers, seemingly good scalability.  </li>
       </ul>
       </p>
+
+
+      <h3>[May 14th, 2026] <a href="https://csrc.nist.gov/News/2026/nist-advances-9-candidates-to-the-3rd-round-of-pqc">Nine Candidates Advance to the Third Round of the Additional Digital Signatures for the PQC Standardization Process</a></h3>
+      <p><b>NIST Announcement</b></p>
+      <p>The selected signature schemes are:
+      <ul>
+         <li><a href="https://faest.info/">FAEST</a> - SHA3- and AES-based, follows <a href="https://github.com/Microsoft/Picnic/">Picnic signature scheme</a> (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/FAEST-spec-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://hawk-sign.info/">HAWK</a> - lattice isomorphism-based (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/hawk-spec-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://pqmayo.org/">MAYO</a> - Oil and Vinegar maps-based (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/mayo-spec-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://mqom.org/">MQOM</a> - MQ on my mind, unstructured multivariate quadratic problem on a finite field (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-2/spec-files/mqom-spec-round2-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://info.isl.ntt.co.jp/crypt/qruov/">QR-UOV</a> - unbalanced Oil and Vinegar scheme (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/qruov-spec-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://sdith.org/">SDitH</a> - Syndrome-Decoding-in-the-Head, from hardness of syndrome decoding problem for random linear codes on a finite field (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-2/spec-files/sdith-spec-round2-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://snova.pqclab.org/">SNOVA</a> - Simple Noncommutative-ring based UOV with key-randomness Alignment (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/SNOVA-spec-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://sqisign.org/">SQIsign</a> - from hardness of finding isogenies between supersingular elliptic curves (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/sqisign-spec-web.pdf">NIST submission</a>);</li>
+         <li><a href="https://www.uovsig.org/">UOV</a> - Unbalanced Oil and Vinegar, from trapdoored multivariate quadratic maps (<a href="https://csrc.nist.gov/csrc/media/Projects/pqc-dig-sig/documents/round-1/spec-files/UOV-spec-web.pdf">NIST submission</a>);</li>
+      </ul>
+      <p>This 3rd phase of review will take about 2 years, and the 7th NIST PQC Standardization Conference will take place in late spring or early summer of 2027.</p>
 
 
       <h3>[May 13th, 2026] <a href="https://keymaterial.net/2026/05/13/so-you-want-to-deploy-fn-dsa/">So you want to deploy FN-DSA</a></h3>
