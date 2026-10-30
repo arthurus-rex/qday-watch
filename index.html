@@ -19,6 +19,28 @@
         
     <h2>Newsfeed</h2>
 
+      <h3>[October, 2026] <a href="https://arthurus-rex.github.io/qday-watch/docs/CNSA_2.0_FAQ_2026.PDF">Update to CNSA 2.0 FAQ</a></h3>
+      <p>The United States National Security Agency has published an update to its CNSA 2.0 FAQ.  
+      It builds upon the previous FAQ (Sept. 2024) and the original publication (Dec. 2022) and incorporates the demands of Executive Orders 14412 and 14413 to accelerate the PQC transition timeline and the domestic manufacture of large, fault-tolerant quantum computers.</p>
+      <p><b>Highlights:</b>
+      <ul>
+          <li>No notable changes to the core algorithm choices, sizes, or use cases.</li>
+          <li>For algorithms not covered, the NSA "reserves the authority to determine the appropriateness" of cryptography on a case-by-case basis.  
+              My interpretation is that since PQC algorithms and their implementations are so diverse, this gives the certification process a small amount leeway if there is a technical justification for an unusual configuration.</li>
+          <li>NSA clarifies that SHA3 is permitted for hardware, but not VMs.
+              SHA3 and SHAKE are still allowed as an internal function in stateful hashes, and there's an added provision that "it would be prudent from a cryptographic agility perspective" for FIPS 140 validated products to allow for selecting SHA3-384 and SHA3-512.</li>
+          <li>Internally hashing ML-DSA (HashML-DSA) is still not allowed, but the NSA allows an external mu as described in <a href="https://datatracker.ietf.org/doc/draft-jenkins-cnsa2-pkix-profile/">CNSA 2.0 Profile for Certificates and Certificate Revocation Lists</a>.</li>
+          <li><b>The timelines have been updated</b> to "well ahead of the 2035 goal outlined in NSM-10", meaning that non-compliant systems must be phased out by Dec. 31st, 2030, and CNSA 2.0 algorithm use is mandatory by Dec. 31st 2031.
+          Because CNSSP 15 requires NSS transition at least as fast as the new executive orders, the timelines have been moved up to match.</li>
+          <li>NIAP-certified products with only partial quantum-resistance will begin to be lose compliance in late 2027.</li>
+          <li>If no fully-certified product for a certain purpose is available by the end of 2026, the non-certified product can still be accepted on a contractual basis and updated as quickly as possible once a certified one becomes available.</li>
+          <li>"NIAP and FIPS validation are required in most circumstances" for CNSA-capable products without certification, which is more expansive than the previous complete ban on unvalidated software as long as the NSA is consulted.
+          My opinion is this allows for greater cryptoability, and accounts for the possibility that no certified product may exist by the deadline.</li>
+          <li>No specific mention of Merkle tree signatures in the "Future cryptographic algorithms" section.</li>
+          <li>In regard to hybrid standards, "very few use CNSA 2.0 algorithms", and "something marketed as hybrid or composite does not necessarily make it quantum resistant".</li>
+          <li>For quantum-vulnerable roots of trust, the NSA is recommending parallel PKI instead of outright replacement, without using novel mechanisms to support multiple algorithms within a single certificate.</li>
+      </ul>
+      </p>
 
       <h3>[July 29th, 2026] <a href="https://blog.cloudflare.com/post-quantum-authentication-to-origins/">Post-quantum authentication to origins is now supperted</a></h3>
       <p><b>Cloudflare blog</b> - <i>Luke Valenta and Kevin Guthrie</i></p>
